@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.battery {
+    width: 100px;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+.battery-level {
+    height: 100%;
+    border-radius: 3px;
+    animation: charge-animation 2s linear infinite;
+}
+
+@keyframes charge-animation {
+    0% {
+        background-color: red; /* Baterai kosong, merah */
+    }
+    33% {
+        background-color: yellow; /* Baterai setengah, kuning */
+    }
+    66% {
+        background-color: orange; /* Baterai hampir penuh, oranye */
+    }
+    100% {
+        background-color: #4CAF50; /* Baterai penuh, hijau */
+    }
+}
